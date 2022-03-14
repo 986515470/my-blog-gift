@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> -->
+	<!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=1, width=device-width"> -->
+	<link href="satellite/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript"src="https://api.map.baidu.com/api?v=3.0&ak=KlVGNTyYxrkC5iwbWGM7MUnT2bfiBlHW"></script>
+
+
+</head>
+<body>
+<div class="w1150">
+    <div class="video-wrapper" >
+		
+        <div class="map-top clearfix">
+            <div class="location-cur-pos js-cur-position">
+				
+        </div>
+		
+        <div class="location-main">
+		      <div class="location-map">
+		         <div id="container" style="width: 100%; height: 170%; overflow: hidden; position: relative; z-index: 0; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align:right;"></div>
+		     </div>
+            <div class="fl location-shop-con">
+                <div class="search-box">
+                    <!-- <input class="search-input"  readonly="value" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下列地点点击可直接切换"> -->
+                    <!-- <span class="search-icon"></span> -->
+                </div>
+                <div class="location-shop-detail">
+                    <ul class="location-list js-store" id="store-list" style="height:650px;overflow: scroll;margin-top: -700px;">
+                    </ul>
+                    <div class="xm-controls xm-controls-small js-pager-controls" page="1" style="float: right;">
+                    </div>
+                </div>
+            </div>
+			
+           
+        </div>
+		
+    </div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="satellite/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="satellite/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="satellite/js/satellite.js"></script>

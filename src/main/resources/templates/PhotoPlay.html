@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#choose span{
+				margin-right:10px;
+			}
+			#choose{
+				position: absolute;
+				width:8000px;
+				height:800px;
+				background:rgba(0,0,0,0.7);
+				text-align: center;
+				line-height: 500px;
+				font-size:50px; 
+				top:0;
+				left:0;
+				display: none;
+				color:#fff;
+				font-weight: bold;
+			}
+			.main{
+				position: relative;
+				margin-right:60px;
+			}
+			.left{
+				float:left;
+			}
+			.sftg-yourinfo{
+				margin-top:60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="main left" >
+				<div id="main" style="width:640px;height:500px;"></div>
+				<div id="choose"></div>
+			</div>
+			<div class="sftg-yourinfo left">
+				<div class="sftglong-input">
+				<h3>随便选张图看看看效果</h3>
+					<a><input type="file" /></a>
+				</div>
+				<div id="lee"></div>
+			</div>		
+		</div>	
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="https://cdn.bootcss.com/echarts/4.0.4/echarts.min.js"></script>
+		<script src="js/echarts-wordcloud.min.js"></script>
+		<script src="js/wordsplay.js"></script>
+	</body>
+</html>

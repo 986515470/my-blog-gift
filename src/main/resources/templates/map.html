@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+<link rel="stylesheet" href="mapchoose/css/demo-center.css" />
+<link rel="stylesheet" type="text/css" href="mapchoose/css/prety-json.css">
+
+<style>
+html,
+body,
+#container {
+	width: 100%;
+	height: 100%;
+}
+#input-info span{
+	display:block;
+	font-size:15px;
+	line-height:30px;
+}	
+</style>
+<title>获取输入地址</title>
+</head>
+
+<body>
+
+<div id="container"></div>
+
+<div class="info">
+	<div class="input-item">
+		<div class="input-item-prepend">
+			<span class="input-item-text" style="width:10rem;">输入或点击获取详细地址</span>
+		</div>
+		<input id='input' type="text" value='江西' >
+	</div>
+	<p  id="input-info"><span></span></p>
+	<div class="input-item">
+		<div class="input-item-prepend"><span class="input-item-text" >地址</span></div>
+		<input id='address' type="text" disabled>
+	</div>
+</div>
+  
+<!--地图api调用-->
+<script src="https://webapi.amap.com/maps?v=1.4.14&key=4d81136d607c68fb6c906599c0bd1de1&plugin=AMap.Autocomplete,AMap.Geocoder"></script>
+
+<script type="text/javascript" src="mapchoose/js/jquery-1.11.1.min.js" ></script>
+<script type="text/javascript" src="mapchoose/js/underscore-min.js" ></script>
+<script type="text/javascript" src="mapchoose/js/backbone-min.js" ></script>
+<script type="text/javascript" src='mapchoose/js/prety-json.js'></script>
+<script type="text/javascript" src='mapchoose/js/map.js'></script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcy.SpringBoot.mapper.thingsMapper">
+    <resultMap id="BaseResultMap" type="com.wcy.SpringBoot.model.things">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="things" jdbcType="VARCHAR" property="things" />
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, things
+  </sql>
+
+    <select id="select"  resultType="com.wcy.SpringBoot.model.things">
+    select * from things order by id asc
+  </select>
+
+  <select id="selectId"  resultType="com.wcy.SpringBoot.model.things">
+    select * from things where id=#{id,jdbcType=INTEGER}
+  </select>
+
+ <delete id="delete" parameterType="java.lang.Integer">
+    delete from things
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+</mapper>

@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>3d标签</title>
+
+<!--<link type="text/css" href="css/style.css" rel="stylesheet" />-->
+<style>
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  perspective: 80em;
+  background: #000;
+  font: 900 1.25em/ 2 vt323, monospace;
+}
+
+div {
+  transform-style: preserve-3d;
+}
+
+div, :after {
+  position: absolute;
+}
+
+.a3d {
+  top: 50%;
+  left: 50%;
+}
+
+.rot, .key {
+  animation: rotY 0s linear infinite;
+}
+
+.rot:nth-child(1) {
+  margin-top: 29vh;
+}
+.rot:nth-child(1), .rot:nth-child(1) .key {
+  animation-duration: 12s;
+  animation-delay: -4.08s;
+}
+.rot:nth-child(1) .key {
+  margin-left: 12vw;
+}
+
+.rot:nth-child(2) {
+  margin-top: 4vh;
+}
+.rot:nth-child(2), .rot:nth-child(2) .key {
+  animation-duration: 12s;
+  animation-delay: -7.56s;
+}
+.rot:nth-child(2) .key {
+  margin-left: 33vw;
+}
+
+.rot:nth-child(3) {
+  margin-top: -3vh;
+}
+.rot:nth-child(3), .rot:nth-child(3) .key {
+  animation-duration: 10s;
+  animation-delay: -7.5s;
+}
+.rot:nth-child(3) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(4) {
+  margin-top: -27vh;
+}
+.rot:nth-child(4), .rot:nth-child(4) .key {
+  animation-duration: 14s;
+  animation-delay: -1.96s;
+}
+.rot:nth-child(4) .key {
+  margin-left: 17vw;
+}
+
+.rot:nth-child(5) {
+  margin-top: 3vh;
+}
+.rot:nth-child(5), .rot:nth-child(5) .key {
+  animation-duration: 8s;
+  animation-delay: -6.72s;
+}
+.rot:nth-child(5) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(6) {
+  margin-top: -8vh;
+}
+.rot:nth-child(6), .rot:nth-child(6) .key {
+  animation-duration: 17s;
+  animation-delay: -7.65s;
+}
+.rot:nth-child(6) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(7) {
+  margin-top: 4vh;
+}
+.rot:nth-child(7), .rot:nth-child(7) .key {
+  animation-duration: 14s;
+  animation-delay: -14s;
+}
+.rot:nth-child(7) .key {
+  margin-left: 34vw;
+}
+
+.rot:nth-child(8) {
+  margin-top: -29vh;
+}
+.rot:nth-child(8), .rot:nth-child(8) .key {
+  animation-duration: 16s;
+  animation-delay: -8.96s;
+}
+.rot:nth-child(8) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(9) {
+  margin-top: 31vh;
+}
+.rot:nth-child(9), .rot:nth-child(9) .key {
+  animation-duration: 11s;
+  animation-delay: -4.73s;
+}
+.rot:nth-child(9) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(10) {
+  margin-top: -16vh;
+}
+.rot:nth-child(10), .rot:nth-child(10) .key {
+  animation-duration: 18s;
+  animation-delay: -2.16s;
+}
+.rot:nth-child(10) .key {
+  margin-left: 13vw;
+}
+
+.rot:nth-child(11) {
+  margin-top: -25vh;
+}
+.rot:nth-child(11), .rot:nth-child(11) .key {
+  animation-duration: 10s;
+  animation-delay: -6.5s;
+}
+.rot:nth-child(11) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(12) {
+  margin-top: -19vh;
+}
+.rot:nth-child(12), .rot:nth-child(12) .key {
+  animation-duration: 12s;
+  animation-delay: -1.32s;
+}
+.rot:nth-child(12) .key {
+  margin-left: 22vw;
+}
+
+.rot:nth-child(13) {
+  margin-top: 7vh;
+}
+.rot:nth-child(13), .rot:nth-child(13) .key {
+  animation-duration: 12s;
+  animation-delay: -5.04s;
+}
+.rot:nth-child(13) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(14) {
+  margin-top: 1vh;
+}
+.rot:nth-child(14), .rot:nth-child(14) .key {
+  animation-duration: 15s;
+  animation-delay: -7.8s;
+}
+.rot:nth-child(14) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(15) {
+  margin-top: -5vh;
+}
+.rot:nth-child(15), .rot:nth-child(15) .key {
+  animation-duration: 18s;
+  animation-delay: -16.56s;
+}
+.rot:nth-child(15) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(16) {
+  margin-top: 2vh;
+}
+.rot:nth-child(16), .rot:nth-child(16) .key {
+  animation-duration: 19s;
+  animation-delay: -18.62s;
+}
+.rot:nth-child(16) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(17) {
+  margin-top: 22vh;
+}
+.rot:nth-child(17), .rot:nth-child(17) .key {
+  animation-duration: 16s;
+  animation-delay: -9.76s;
+}
+.rot:nth-child(17) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(18) {
+  margin-top: 28vh;
+}
+.rot:nth-child(18), .rot:nth-child(18) .key {
+  animation-duration: 14s;
+  animation-delay: -8.26s;
+}
+.rot:nth-child(18) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(19) {
+  margin-top: 10vh;
+}
+.rot:nth-child(19), .rot:nth-child(19) .key {
+  animation-duration: 16s;
+  animation-delay: -3.2s;
+}
+.rot:nth-child(19) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(20) {
+  margin-top: -24vh;
+}
+.rot:nth-child(20), .rot:nth-child(20) .key {
+  animation-duration: 16s;
+  animation-delay: -4.48s;
+}
+.rot:nth-child(20) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(21) {
+  margin-top: 0vh;
+}
+.rot:nth-child(21), .rot:nth-child(21) .key {
+  animation-duration: 11s;
+  animation-delay: -5.83s;
+}
+.rot:nth-child(21) .key {
+  margin-left: 14vw;
+}
+
+.rot:nth-child(22) {
+  margin-top: -2vh;
+}
+.rot:nth-child(22), .rot:nth-child(22) .key {
+  animation-duration: 16s;
+  animation-delay: -7.84s;
+}
+.rot:nth-child(22) .key {
+  margin-left: 28vw;
+}
+
+.rot:nth-child(23) {
+  margin-top: -8vh;
+}
+.rot:nth-child(23), .rot:nth-child(23) .key {
+  animation-duration: 19s;
+  animation-delay: -14.25s;
+}
+.rot:nth-child(23) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(24) {
+  margin-top: -31vh;
+}
+.rot:nth-child(24), .rot:nth-child(24) .key {
+  animation-duration: 16s;
+  animation-delay: -9.28s;
+}
+.rot:nth-child(24) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(25) {
+  margin-top: 4vh;
+}
+.rot:nth-child(25), .rot:nth-child(25) .key {
+  animation-duration: 8s;
+  animation-delay: -3.84s;
+}
+.rot:nth-child(25) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(26) {
+  margin-top: -11vh;
+}
+.rot:nth-child(26), .rot:nth-child(26) .key {
+  animation-duration: 12s;
+  animation-delay: -6.96s;
+}
+.rot:nth-child(26) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(27) {
+  margin-top: 10vh;
+}
+.rot:nth-child(27), .rot:nth-child(27) .key {
+  animation-duration: 14s;
+  animation-delay: -4.48s;
+}
+.rot:nth-child(27) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(28) {
+  margin-top: 5vh;
+}
+.rot:nth-child(28), .rot:nth-child(28) .key {
+  animation-duration: 18s;
+  animation-delay: -9.54s;
+}
+.rot:nth-child(28) .key {
+  margin-left: 30vw;
+}
+
+.rot:nth-child(29) {
+  margin-top: -34vh;
+}
+.rot:nth-child(29), .rot:nth-child(29) .key {
+  animation-duration: 20s;
+  animation-delay: -4.8s;
+}
+.rot:nth-child(29) .key {
+  margin-left: 35vw;
+}
+
+.rot:nth-child(30) {
+  margin-top: 29vh;
+}
+.rot:nth-child(30), .rot:nth-child(30) .key {
+  animation-duration: 10s;
+  animation-delay: -6.1s;
+}
+.rot:nth-child(30) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(31) {
+  margin-top: 18vh;
+}
+.rot:nth-child(31), .rot:nth-child(31) .key {
+  animation-duration: 14s;
+  animation-delay: -13.72s;
+}
+.rot:nth-child(31) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(32) {
+  margin-top: 3vh;
+}
+.rot:nth-child(32), .rot:nth-child(32) .key {
+  animation-duration: 12s;
+  animation-delay: -1.8s;
+}
+.rot:nth-child(32) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(33) {
+  margin-top: -25vh;
+}
+.rot:nth-child(33), .rot:nth-child(33) .key {
+  animation-duration: 18s;
+  animation-delay: -3.96s;
+}
+.rot:nth-child(33) .key {
+  margin-left: 31vw;
+}
+
+.rot:nth-child(34) {
+  margin-top: 26vh;
+}
+.rot:nth-child(34), .rot:nth-child(34) .key {
+  animation-duration: 18s;
+  animation-delay: -9.36s;
+}
+.rot:nth-child(34) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(35) {
+  margin-top: 28vh;
+}
+.rot:nth-child(35), .rot:nth-child(35) .key {
+  animation-duration: 16s;
+  animation-delay: -7.68s;
+}
+.rot:nth-child(35) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(36) {
+  margin-top: -22vh;
+}
+.rot:nth-child(36), .rot:nth-child(36) .key {
+  animation-duration: 8s;
+  animation-delay: -7.28s;
+}
+.rot:nth-child(36) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(37) {
+  margin-top: -21vh;
+}
+.rot:nth-child(37), .rot:nth-child(37) .key {
+  animation-duration: 14s;
+  animation-delay: -10.08s;
+}
+.rot:nth-child(37) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(38) {
+  margin-top: 34vh;
+}
+.rot:nth-child(38), .rot:nth-child(38) .key {
+  animation-duration: 19s;
+  animation-delay: -16.72s;
+}
+.rot:nth-child(38) .key {
+  margin-left: 22vw;
+}
+
+.rot:nth-child(39) {
+  margin-top: 19vh;
+}
+.rot:nth-child(39), .rot:nth-child(39) .key {
+  animation-duration: 20s;
+  animation-delay: -9.6s;
+}
+.rot:nth-child(39) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(40) {
+  margin-top: -16vh;
+}
+.rot:nth-child(40), .rot:nth-child(40) .key {
+  animation-duration: 17s;
+  animation-delay: -1.19s;
+}
+.rot:nth-child(40) .key {
+  margin-left: 22vw;
+}
+
+.rot:nth-child(41) {
+  margin-top: 15vh;
+}
+.rot:nth-child(41), .rot:nth-child(41) .key {
+  animation-duration: 18s;
+  animation-delay: -1.26s;
+}
+.rot:nth-child(41) .key {
+  margin-left: 14vw;
+}
+
+.rot:nth-child(42) {
+  margin-top: 7vh;
+}
+.rot:nth-child(42), .rot:nth-child(42) .key {
+  animation-duration: 10s;
+  animation-delay: -5.9s;
+}
+.rot:nth-child(42) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(43) {
+  margin-top: -23vh;
+}
+.rot:nth-child(43), .rot:nth-child(43) .key {
+  animation-duration: 10s;
+  animation-delay: -4.8s;
+}
+.rot:nth-child(43) .key {
+  margin-left: 34vw;
+}
+
+.rot:nth-child(44) {
+  margin-top: -18vh;
+}
+.rot:nth-child(44), .rot:nth-child(44) .key {
+  animation-duration: 8s;
+  animation-delay: -5.12s;
+}
+.rot:nth-child(44) .key {
+  margin-left: 33vw;
+}
+
+.rot:nth-child(45) {
+  margin-top: -23vh;
+}
+.rot:nth-child(45), .rot:nth-child(45) .key {
+  animation-duration: 8s;
+  animation-delay: -7.6s;
+}
+.rot:nth-child(45) .key {
+  margin-left: 29vw;
+}
+
+.rot:nth-child(46) {
+  margin-top: -27vh;
+}
+.rot:nth-child(46), .rot:nth-child(46) .key {
+  animation-duration: 13s;
+  animation-delay: -13s;
+}
+.rot:nth-child(46) .key {
+  margin-left: 21vw;
+}
+
+.rot:nth-child(47) {
+  margin-top: -29vh;
+}
+.rot:nth-child(47), .rot:nth-child(47) .key {
+  animation-duration: 17s;
+  animation-delay: -1.19s;
+}
+.rot:nth-child(47) .key {
+  margin-left: 25vw;
+}
+
+.rot:nth-child(48) {
+  margin-top: 27vh;
+}
+.rot:nth-child(48), .rot:nth-child(48) .key {
+  animation-duration: 14s;
+  animation-delay: -5.04s;
+}
+.rot:nth-child(48) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(49) {
+  margin-top: -13vh;
+}
+.rot:nth-child(49), .rot:nth-child(49) .key {
+  animation-duration: 18s;
+  animation-delay: -12.42s;
+}
+.rot:nth-child(49) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(50) {
+  margin-top: -6vh;
+}
+.rot:nth-child(50), .rot:nth-child(50) .key {
+  animation-duration: 17s;
+  animation-delay: -4.93s;
+}
+.rot:nth-child(50) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(51) {
+  margin-top: 24vh;
+}
+.rot:nth-child(51), .rot:nth-child(51) .key {
+  animation-duration: 8s;
+  animation-delay: -7.52s;
+}
+.rot:nth-child(51) .key {
+  margin-left: 34vw;
+}
+
+.rot:nth-child(52) {
+  margin-top: 13vh;
+}
+.rot:nth-child(52), .rot:nth-child(52) .key {
+  animation-duration: 8s;
+  animation-delay: -1.36s;
+}
+.rot:nth-child(52) .key {
+  margin-left: 20vw;
+}
+
+.rot:nth-child(53) {
+  margin-top: 19vh;
+}
+.rot:nth-child(53), .rot:nth-child(53) .key {
+  animation-duration: 18s;
+  animation-delay: -14.76s;
+}
+.rot:nth-child(53) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(54) {
+  margin-top: 19vh;
+}
+.rot:nth-child(54), .rot:nth-child(54) .key {
+  animation-duration: 15s;
+  animation-delay: -0.3s;
+}
+.rot:nth-child(54) .key {
+  margin-left: 26vw;
+}
+
+.rot:nth-child(55) {
+  margin-top: -22vh;
+}
+.rot:nth-child(55), .rot:nth-child(55) .key {
+  animation-duration: 20s;
+  animation-delay: -3.6s;
+}
+.rot:nth-child(55) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(56) {
+  margin-top: -15vh;
+}
+.rot:nth-child(56), .rot:nth-child(56) .key {
+  animation-duration: 9s;
+  animation-delay: -6.21s;
+}
+.rot:nth-child(56) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(57) {
+  margin-top: 21vh;
+}
+.rot:nth-child(57), .rot:nth-child(57) .key {
+  animation-duration: 17s;
+  animation-delay: -13.6s;
+}
+.rot:nth-child(57) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(58) {
+  margin-top: -12vh;
+}
+.rot:nth-child(58), .rot:nth-child(58) .key {
+  animation-duration: 19s;
+  animation-delay: -16.91s;
+}
+.rot:nth-child(58) .key {
+  margin-left: 17vw;
+}
+
+.rot:nth-child(59) {
+  margin-top: -32vh;
+}
+.rot:nth-child(59), .rot:nth-child(59) .key {
+  animation-duration: 12s;
+  animation-delay: -4.8s;
+}
+.rot:nth-child(59) .key {
+  margin-left: 14vw;
+}
+
+.rot:nth-child(60) {
+  margin-top: 13vh;
+}
+.rot:nth-child(60), .rot:nth-child(60) .key {
+  animation-duration: 18s;
+  animation-delay: -9.36s;
+}
+.rot:nth-child(60) .key {
+  margin-left: 20vw;
+}
+
+.rot:nth-child(61) {
+  margin-top: -29vh;
+}
+.rot:nth-child(61), .rot:nth-child(61) .key {
+  animation-duration: 10s;
+  animation-delay: -4.7s;
+}
+.rot:nth-child(61) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(62) {
+  margin-top: -29vh;
+}
+.rot:nth-child(62), .rot:nth-child(62) .key {
+  animation-duration: 15s;
+  animation-delay: -5.25s;
+}
+.rot:nth-child(62) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(63) {
+  margin-top: 26vh;
+}
+.rot:nth-child(63), .rot:nth-child(63) .key {
+  animation-duration: 13s;
+  animation-delay: -9.88s;
+}
+.rot:nth-child(63) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(64) {
+  margin-top: -11vh;
+}
+.rot:nth-child(64), .rot:nth-child(64) .key {
+  animation-duration: 14s;
+  animation-delay: -7.98s;
+}
+.rot:nth-child(64) .key {
+  margin-left: 14vw;
+}
+
+.rot:nth-child(65) {
+  margin-top: -34vh;
+}
+.rot:nth-child(65), .rot:nth-child(65) .key {
+  animation-duration: 17s;
+  animation-delay: -6.63s;
+}
+.rot:nth-child(65) .key {
+  margin-left: 13vw;
+}
+
+.rot:nth-child(66) {
+  margin-top: 1vh;
+}
+.rot:nth-child(66), .rot:nth-child(66) .key {
+  animation-duration: 10s;
+  animation-delay: -9.6s;
+}
+.rot:nth-child(66) .key {
+  margin-left: 34vw;
+}
+
+.rot:nth-child(67) {
+  margin-top: -18vh;
+}
+.rot:nth-child(67), .rot:nth-child(67) .key {
+  animation-duration: 15s;
+  animation-delay: -9.45s;
+}
+.rot:nth-child(67) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(68) {
+  margin-top: 7vh;
+}
+.rot:nth-child(68), .rot:nth-child(68) .key {
+  animation-duration: 12s;
+  animation-delay: -11.64s;
+}
+.rot:nth-child(68) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(69) {
+  margin-top: 13vh;
+}
+.rot:nth-child(69), .rot:nth-child(69) .key {
+  animation-duration: 17s;
+  animation-delay: -7.82s;
+}
+.rot:nth-child(69) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(70) {
+  margin-top: -29vh;
+}
+.rot:nth-child(70), .rot:nth-child(70) .key {
+  animation-duration: 11s;
+  animation-delay: -9.35s;
+}
+.rot:nth-child(70) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(71) {
+  margin-top: 8vh;
+}
+.rot:nth-child(71), .rot:nth-child(71) .key {
+  animation-duration: 14s;
+  animation-delay: -6.58s;
+}
+.rot:nth-child(71) .key {
+  margin-left: 26vw;
+}
+
+.rot:nth-child(72) {
+  margin-top: 16vh;
+}
+.rot:nth-child(72), .rot:nth-child(72) .key {
+  animation-duration: 11s;
+  animation-delay: -3.08s;
+}
+.rot:nth-child(72) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(73) {
+  margin-top: -1vh;
+}
+.rot:nth-child(73), .rot:nth-child(73) .key {
+  animation-duration: 16s;
+  animation-delay: -5.6s;
+}
+.rot:nth-child(73) .key {
+  margin-left: 28vw;
+}
+
+.rot:nth-child(74) {
+  margin-top: -22vh;
+}
+.rot:nth-child(74), .rot:nth-child(74) .key {
+  animation-duration: 19s;
+  animation-delay: -11.59s;
+}
+.rot:nth-child(74) .key {
+  margin-left: 13vw;
+}
+
+.rot:nth-child(75) {
+  margin-top: 0vh;
+}
+.rot:nth-child(75), .rot:nth-child(75) .key {
+  animation-duration: 16s;
+  animation-delay: -8.16s;
+}
+.rot:nth-child(75) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(76) {
+  margin-top: 8vh;
+}
+.rot:nth-child(76), .rot:nth-child(76) .key {
+  animation-duration: 8s;
+  animation-delay: -3.12s;
+}
+.rot:nth-child(76) .key {
+  margin-left: 26vw;
+}
+
+.rot:nth-child(77) {
+  margin-top: 3vh;
+}
+.rot:nth-child(77), .rot:nth-child(77) .key {
+  animation-duration: 11s;
+  animation-delay: -2.75s;
+}
+.rot:nth-child(77) .key {
+  margin-left: 19vw;
+}
+
+.rot:nth-child(78) {
+  margin-top: 21vh;
+}
+.rot:nth-child(78), .rot:nth-child(78) .key {
+  animation-duration: 19s;
+  animation-delay: -5.7s;
+}
+.rot:nth-child(78) .key {
+  margin-left: 35vw;
+}
+
+.rot:nth-child(79) {
+  margin-top: 13vh;
+}
+.rot:nth-child(79), .rot:nth-child(79) .key {
+  animation-duration: 20s;
+  animation-delay: -9.8s;
+}
+.rot:nth-child(79) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(80) {
+  margin-top: 34vh;
+}
+.rot:nth-child(80), .rot:nth-child(80) .key {
+  animation-duration: 13s;
+  animation-delay: -10.66s;
+}
+.rot:nth-child(80) .key {
+  margin-left: 25vw;
+}
+
+.rot:nth-child(81) {
+  margin-top: 0vh;
+}
+.rot:nth-child(81), .rot:nth-child(81) .key {
+  animation-duration: 17s;
+  animation-delay: -7.48s;
+}
+.rot:nth-child(81) .key {
+  margin-left: 29vw;
+}
+
+.rot:nth-child(82) {
+  margin-top: 12vh;
+}
+.rot:nth-child(82), .rot:nth-child(82) .key {
+  animation-duration: 12s;
+  animation-delay: -8.64s;
+}
+.rot:nth-child(82) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(83) {
+  margin-top: 23vh;
+}
+.rot:nth-child(83), .rot:nth-child(83) .key {
+  animation-duration: 15s;
+  animation-delay: -11.7s;
+}
+.rot:nth-child(83) .key {
+  margin-left: 17vw;
+}
+
+.rot:nth-child(84) {
+  margin-top: 10vh;
+}
+.rot:nth-child(84), .rot:nth-child(84) .key {
+  animation-duration: 15s;
+  animation-delay: -7.2s;
+}
+.rot:nth-child(84) .key {
+  margin-left: 12vw;
+}
+
+.rot:nth-child(85) {
+  margin-top: -27vh;
+}
+.rot:nth-child(85), .rot:nth-child(85) .key {
+  animation-duration: 17s;
+  animation-delay: -2.38s;
+}
+.rot:nth-child(85) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(86) {
+  margin-top: -3vh;
+}
+.rot:nth-child(86), .rot:nth-child(86) .key {
+  animation-duration: 13s;
+  animation-delay: -9.75s;
+}
+.rot:nth-child(86) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(87) {
+  margin-top: -6vh;
+}
+.rot:nth-child(87), .rot:nth-child(87) .key {
+  animation-duration: 17s;
+  animation-delay: -1.53s;
+}
+.rot:nth-child(87) .key {
+  margin-left: 21vw;
+}
+
+.rot:nth-child(88) {
+  margin-top: 18vh;
+}
+.rot:nth-child(88), .rot:nth-child(88) .key {
+  animation-duration: 17s;
+  animation-delay: -11.22s;
+}
+.rot:nth-child(88) .key {
+  margin-left: 25vw;
+}
+
+.rot:nth-child(89) {
+  margin-top: -7vh;
+}
+.rot:nth-child(89), .rot:nth-child(89) .key {
+  animation-duration: 20s;
+  animation-delay: -19.4s;
+}
+.rot:nth-child(89) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(90) {
+  margin-top: -14vh;
+}
+.rot:nth-child(90), .rot:nth-child(90) .key {
+  animation-duration: 13s;
+  animation-delay: -12.35s;
+}
+.rot:nth-child(90) .key {
+  margin-left: 26vw;
+}
+
+.rot:nth-child(91) {
+  margin-top: 32vh;
+}
+.rot:nth-child(91), .rot:nth-child(91) .key {
+  animation-duration: 20s;
+  animation-delay: -18.2s;
+}
+.rot:nth-child(91) .key {
+  margin-left: 25vw;
+}
+
+.rot:nth-child(92) {
+  margin-top: 15vh;
+}
+.rot:nth-child(92), .rot:nth-child(92) .key {
+  animation-duration: 12s;
+  animation-delay: -2.64s;
+}
+.rot:nth-child(92) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(93) {
+  margin-top: 19vh;
+}
+.rot:nth-child(93), .rot:nth-child(93) .key {
+  animation-duration: 11s;
+  animation-delay: -9.9s;
+}
+.rot:nth-child(93) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(94) {
+  margin-top: -6vh;
+}
+.rot:nth-child(94), .rot:nth-child(94) .key {
+  animation-duration: 8s;
+  animation-delay: -4.16s;
+}
+.rot:nth-child(94) .key {
+  margin-left: 28vw;
+}
+
+.rot:nth-child(95) {
+  margin-top: -25vh;
+}
+.rot:nth-child(95), .rot:nth-child(95) .key {
+  animation-duration: 11s;
+  animation-delay: -0.55s;
+}
+.rot:nth-child(95) .key {
+  margin-left: 31vw;
+}
+
+.rot:nth-child(96) {
+  margin-top: -1vh;
+}
+.rot:nth-child(96), .rot:nth-child(96) .key {
+  animation-duration: 20s;
+  animation-delay: -8.4s;
+}
+.rot:nth-child(96) .key {
+  margin-left: 10vw;
+}
+
+.rot:nth-child(97) {
+  margin-top: -32vh;
+}
+.rot:nth-child(97), .rot:nth-child(97) .key {
+  animation-duration: 10s;
+  animation-delay: -5.4s;
+}
+.rot:nth-child(97) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(98) {
+  margin-top: 25vh;
+}
+.rot:nth-child(98), .rot:nth-child(98) .key {
+  animation-duration: 19s;
+  animation-delay: -17.67s;
+}
+.rot:nth-child(98) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(99) {
+  margin-top: 23vh;
+}
+.rot:nth-child(99), .rot:nth-child(99) .key {
+  animation-duration: 15s;
+  animation-delay: -6.15s;
+}
+.rot:nth-child(99) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(100) {
+  margin-top: -20vh;
+}
+.rot:nth-child(100), .rot:nth-child(100) .key {
+  animation-duration: 10s;
+  animation-delay: -3.8s;
+}
+.rot:nth-child(100) .key {
+  margin-left: 17vw;
+}
+
+.rot:nth-child(101) {
+  margin-top: -22vh;
+}
+.rot:nth-child(101), .rot:nth-child(101) .key {
+  animation-duration: 14s;
+  animation-delay: -5.32s;
+}
+.rot:nth-child(101) .key {
+  margin-left: 21vw;
+}
+
+.rot:nth-child(102) {
+  margin-top: -10vh;
+}
+.rot:nth-child(102), .rot:nth-child(102) .key {
+  animation-duration: 13s;
+  animation-delay: -3.64s;
+}
+.rot:nth-child(102) .key {
+  margin-left: 30vw;
+}
+
+.rot:nth-child(103) {
+  margin-top: 6vh;
+}
+.rot:nth-child(103), .rot:nth-child(103) .key {
+  animation-duration: 20s;
+  animation-delay: -6.2s;
+}
+.rot:nth-child(103) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(104) {
+  margin-top: 26vh;
+}
+.rot:nth-child(104), .rot:nth-child(104) .key {
+  animation-duration: 14s;
+  animation-delay: -2.24s;
+}
+.rot:nth-child(104) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(105) {
+  margin-top: 21vh;
+}
+.rot:nth-child(105), .rot:nth-child(105) .key {
+  animation-duration: 18s;
+  animation-delay: -8.46s;
+}
+.rot:nth-child(105) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(106) {
+  margin-top: -5vh;
+}
+.rot:nth-child(106), .rot:nth-child(106) .key {
+  animation-duration: 20s;
+  animation-delay: -13s;
+}
+.rot:nth-child(106) .key {
+  margin-left: 19vw;
+}
+
+.rot:nth-child(107) {
+  margin-top: 23vh;
+}
+.rot:nth-child(107), .rot:nth-child(107) .key {
+  animation-duration: 8s;
+  animation-delay: -6.08s;
+}
+.rot:nth-child(107) .key {
+  margin-left: 31vw;
+}
+
+.rot:nth-child(108) {
+  margin-top: 9vh;
+}
+.rot:nth-child(108), .rot:nth-child(108) .key {
+  animation-duration: 17s;
+  animation-delay: -11.39s;
+}
+.rot:nth-child(108) .key {
+  margin-left: 33vw;
+}
+
+.rot:nth-child(109) {
+  margin-top: 34vh;
+}
+.rot:nth-child(109), .rot:nth-child(109) .key {
+  animation-duration: 10s;
+  animation-delay: -5.7s;
+}
+.rot:nth-child(109) .key {
+  margin-left: 20vw;
+}
+
+.rot:nth-child(110) {
+  margin-top: -20vh;
+}
+.rot:nth-child(110), .rot:nth-child(110) .key {
+  animation-duration: 9s;
+  animation-delay: -5.04s;
+}
+.rot:nth-child(110) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(111) {
+  margin-top: -5vh;
+}
+.rot:nth-child(111), .rot:nth-child(111) .key {
+  animation-duration: 13s;
+  animation-delay: -9.49s;
+}
+.rot:nth-child(111) .key {
+  margin-left: 25vw;
+}
+
+.rot:nth-child(112) {
+  margin-top: -19vh;
+}
+.rot:nth-child(112), .rot:nth-child(112) .key {
+  animation-duration: 15s;
+  animation-delay: -11.85s;
+}
+.rot:nth-child(112) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(113) {
+  margin-top: -29vh;
+}
+.rot:nth-child(113), .rot:nth-child(113) .key {
+  animation-duration: 9s;
+  animation-delay: -1.8s;
+}
+.rot:nth-child(113) .key {
+  margin-left: 13vw;
+}
+
+.rot:nth-child(114) {
+  margin-top: 11vh;
+}
+.rot:nth-child(114), .rot:nth-child(114) .key {
+  animation-duration: 10s;
+  animation-delay: -6.9s;
+}
+.rot:nth-child(114) .key {
+  margin-left: 20vw;
+}
+
+.rot:nth-child(115) {
+  margin-top: 5vh;
+}
+.rot:nth-child(115), .rot:nth-child(115) .key {
+  animation-duration: 10s;
+  animation-delay: -6.9s;
+}
+.rot:nth-child(115) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(116) {
+  margin-top: 19vh;
+}
+.rot:nth-child(116), .rot:nth-child(116) .key {
+  animation-duration: 8s;
+  animation-delay: -6.64s;
+}
+.rot:nth-child(116) .key {
+  margin-left: 11vw;
+}
+
+.rot:nth-child(117) {
+  margin-top: -10vh;
+}
+.rot:nth-child(117), .rot:nth-child(117) .key {
+  animation-duration: 10s;
+  animation-delay: -4.1s;
+}
+.rot:nth-child(117) .key {
+  margin-left: 25vw;
+}
+
+.rot:nth-child(118) {
+  margin-top: 33vh;
+}
+.rot:nth-child(118), .rot:nth-child(118) .key {
+  animation-duration: 15s;
+  animation-delay: -8.1s;
+}
+.rot:nth-child(118) .key {
+  margin-left: 10vw;
+}
+
+.rot:nth-child(119) {
+  margin-top: 31vh;
+}
+.rot:nth-child(119), .rot:nth-child(119) .key {
+  animation-duration: 16s;
+  animation-delay: -9.76s;
+}
+.rot:nth-child(119) .key {
+  margin-left: 10vw;
+}
+
+.rot:nth-child(120) {
+  margin-top: 9vh;
+}
+.rot:nth-child(120), .rot:nth-child(120) .key {
+  animation-duration: 18s;
+  animation-delay: -10.8s;
+}
+.rot:nth-child(120) .key {
+  margin-left: 30vw;
+}
+
+.rot:nth-child(121) {
+  margin-top: -18vh;
+}
+.rot:nth-child(121), .rot:nth-child(121) .key {
+  animation-duration: 10s;
+  animation-delay: -5s;
+}
+.rot:nth-child(121) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(122) {
+  margin-top: 17vh;
+}
+.rot:nth-child(122), .rot:nth-child(122) .key {
+  animation-duration: 12s;
+  animation-delay: -11.88s;
+}
+.rot:nth-child(122) .key {
+  margin-left: 28vw;
+}
+
+.rot:nth-child(123) {
+  margin-top: 1vh;
+}
+.rot:nth-child(123), .rot:nth-child(123) .key {
+  animation-duration: 20s;
+  animation-delay: -9.2s;
+}
+.rot:nth-child(123) .key {
+  margin-left: 35vw;
+}
+
+.rot:nth-child(124) {
+  margin-top: -4vh;
+}
+.rot:nth-child(124), .rot:nth-child(124) .key {
+  animation-duration: 13s;
+  animation-delay: -3.51s;
+}
+.rot:nth-child(124) .key {
+  margin-left: 26vw;
+}
+
+.rot:nth-child(125) {
+  margin-top: 35vh;
+}
+.rot:nth-child(125), .rot:nth-child(125) .key {
+  animation-duration: 13s;
+  animation-delay: -8.58s;
+}
+.rot:nth-child(125) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(126) {
+  margin-top: -34vh;
+}
+.rot:nth-child(126), .rot:nth-child(126) .key {
+  animation-duration: 14s;
+  animation-delay: -8.54s;
+}
+.rot:nth-child(126) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(127) {
+  margin-top: 14vh;
+}
+.rot:nth-child(127), .rot:nth-child(127) .key {
+  animation-duration: 8s;
+  animation-delay: -2.16s;
+}
+.rot:nth-child(127) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(128) {
+  margin-top: 22vh;
+}
+.rot:nth-child(128), .rot:nth-child(128) .key {
+  animation-duration: 8s;
+  animation-delay: -2s;
+}
+.rot:nth-child(128) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(129) {
+  margin-top: -20vh;
+}
+.rot:nth-child(129), .rot:nth-child(129) .key {
+  animation-duration: 13s;
+  animation-delay: -8.58s;
+}
+.rot:nth-child(129) .key {
+  margin-left: 12vw;
+}
+
+.rot:nth-child(130) {
+  margin-top: -20vh;
+}
+.rot:nth-child(130), .rot:nth-child(130) .key {
+  animation-duration: 14s;
+  animation-delay: -6.3s;
+}
+.rot:nth-child(130) .key {
+  margin-left: 30vw;
+}
+
+.rot:nth-child(131) {
+  margin-top: -2vh;
+}
+.rot:nth-child(131), .rot:nth-child(131) .key {
+  animation-duration: 11s;
+  animation-delay: -1.87s;
+}
+.rot:nth-child(131) .key {
+  margin-left: 33vw;
+}
+
+.rot:nth-child(132) {
+  margin-top: 18vh;
+}
+.rot:nth-child(132), .rot:nth-child(132) .key {
+  animation-duration: 13s;
+  animation-delay: -8.58s;
+}
+.rot:nth-child(132) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(133) {
+  margin-top: -22vh;
+}
+.rot:nth-child(133), .rot:nth-child(133) .key {
+  animation-duration: 13s;
+  animation-delay: -3.9s;
+}
+.rot:nth-child(133) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(134) {
+  margin-top: 23vh;
+}
+.rot:nth-child(134), .rot:nth-child(134) .key {
+  animation-duration: 12s;
+  animation-delay: -6s;
+}
+.rot:nth-child(134) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(135) {
+  margin-top: 15vh;
+}
+.rot:nth-child(135), .rot:nth-child(135) .key {
+  animation-duration: 19s;
+  animation-delay: -9.88s;
+}
+.rot:nth-child(135) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(136) {
+  margin-top: 11vh;
+}
+.rot:nth-child(136), .rot:nth-child(136) .key {
+  animation-duration: 19s;
+  animation-delay: -7.22s;
+}
+.rot:nth-child(136) .key {
+  margin-left: 10vw;
+}
+
+.rot:nth-child(137) {
+  margin-top: 34vh;
+}
+.rot:nth-child(137), .rot:nth-child(137) .key {
+  animation-duration: 16s;
+  animation-delay: -11.2s;
+}
+.rot:nth-child(137) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(138) {
+  margin-top: 13vh;
+}
+.rot:nth-child(138), .rot:nth-child(138) .key {
+  animation-duration: 11s;
+  animation-delay: -9.24s;
+}
+.rot:nth-child(138) .key {
+  margin-left: 29vw;
+}
+
+.rot:nth-child(139) {
+  margin-top: -10vh;
+}
+.rot:nth-child(139), .rot:nth-child(139) .key {
+  animation-duration: 14s;
+  animation-delay: -1.68s;
+}
+.rot:nth-child(139) .key {
+  margin-left: 17vw;
+}
+
+.rot:nth-child(140) {
+  margin-top: 8vh;
+}
+.rot:nth-child(140), .rot:nth-child(140) .key {
+  animation-duration: 19s;
+  animation-delay: -0.76s;
+}
+.rot:nth-child(140) .key {
+  margin-left: 10vw;
+}
+
+.rot:nth-child(141) {
+  margin-top: 33vh;
+}
+.rot:nth-child(141), .rot:nth-child(141) .key {
+  animation-duration: 16s;
+  animation-delay: -14.24s;
+}
+.rot:nth-child(141) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(142) {
+  margin-top: -7vh;
+}
+.rot:nth-child(142), .rot:nth-child(142) .key {
+  animation-duration: 15s;
+  animation-delay: -0.3s;
+}
+.rot:nth-child(142) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(143) {
+  margin-top: -33vh;
+}
+.rot:nth-child(143), .rot:nth-child(143) .key {
+  animation-duration: 14s;
+  animation-delay: -5.32s;
+}
+.rot:nth-child(143) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(144) {
+  margin-top: 34vh;
+}
+.rot:nth-child(144), .rot:nth-child(144) .key {
+  animation-duration: 9s;
+  animation-delay: -0.54s;
+}
+.rot:nth-child(144) .key {
+  margin-left: 20vw;
+}
+
+.rot:nth-child(145) {
+  margin-top: 31vh;
+}
+.rot:nth-child(145), .rot:nth-child(145) .key {
+  animation-duration: 11s;
+  animation-delay: -1.54s;
+}
+.rot:nth-child(145) .key {
+  margin-left: 7vw;
+}
+
+.rot:nth-child(146) {
+  margin-top: -16vh;
+}
+.rot:nth-child(146), .rot:nth-child(146) .key {
+  animation-duration: 19s;
+  animation-delay: -13.68s;
+}
+.rot:nth-child(146) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(147) {
+  margin-top: -29vh;
+}
+.rot:nth-child(147), .rot:nth-child(147) .key {
+  animation-duration: 9s;
+  animation-delay: -5.13s;
+}
+.rot:nth-child(147) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(148) {
+  margin-top: 16vh;
+}
+.rot:nth-child(148), .rot:nth-child(148) .key {
+  animation-duration: 16s;
+  animation-delay: -14.56s;
+}
+.rot:nth-child(148) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(149) {
+  margin-top: -4vh;
+}
+.rot:nth-child(149), .rot:nth-child(149) .key {
+  animation-duration: 12s;
+  animation-delay: -9.84s;
+}
+.rot:nth-child(149) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(150) {
+  margin-top: 24vh;
+}
+.rot:nth-child(150), .rot:nth-child(150) .key {
+  animation-duration: 11s;
+  animation-delay: -6.82s;
+}
+.rot:nth-child(150) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(151) {
+  margin-top: 5vh;
+}
+.rot:nth-child(151), .rot:nth-child(151) .key {
+  animation-duration: 14s;
+  animation-delay: -12.32s;
+}
+.rot:nth-child(151) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(152) {
+  margin-top: 25vh;
+}
+.rot:nth-child(152), .rot:nth-child(152) .key {
+  animation-duration: 18s;
+  animation-delay: -16.92s;
+}
+.rot:nth-child(152) .key {
+  margin-left: 30vw;
+}
+
+.rot:nth-child(153) {
+  margin-top: -34vh;
+}
+.rot:nth-child(153), .rot:nth-child(153) .key {
+  animation-duration: 17s;
+  animation-delay: -16.15s;
+}
+.rot:nth-child(153) .key {
+  margin-left: 20vw;
+}
+
+.rot:nth-child(154) {
+  margin-top: -22vh;
+}
+.rot:nth-child(154), .rot:nth-child(154) .key {
+  animation-duration: 10s;
+  animation-delay: -0.5s;
+}
+.rot:nth-child(154) .key {
+  margin-left: 34vw;
+}
+
+.rot:nth-child(155) {
+  margin-top: 7vh;
+}
+.rot:nth-child(155), .rot:nth-child(155) .key {
+  animation-duration: 14s;
+  animation-delay: -8.96s;
+}
+.rot:nth-child(155) .key {
+  margin-left: 13vw;
+}
+
+.rot:nth-child(156) {
+  margin-top: -26vh;
+}
+.rot:nth-child(156), .rot:nth-child(156) .key {
+  animation-duration: 18s;
+  animation-delay: -11.16s;
+}
+.rot:nth-child(156) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(157) {
+  margin-top: 2vh;
+}
+.rot:nth-child(157), .rot:nth-child(157) .key {
+  animation-duration: 13s;
+  animation-delay: -4.03s;
+}
+.rot:nth-child(157) .key {
+  margin-left: 20vw;
+}
+
+.rot:nth-child(158) {
+  margin-top: 28vh;
+}
+.rot:nth-child(158), .rot:nth-child(158) .key {
+  animation-duration: 14s;
+  animation-delay: -6.72s;
+}
+.rot:nth-child(158) .key {
+  margin-left: 19vw;
+}
+
+.rot:nth-child(159) {
+  margin-top: 27vh;
+}
+.rot:nth-child(159), .rot:nth-child(159) .key {
+  animation-duration: 20s;
+  animation-delay: -18.8s;
+}
+.rot:nth-child(159) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(160) {
+  margin-top: 29vh;
+}
+.rot:nth-child(160), .rot:nth-child(160) .key {
+  animation-duration: 16s;
+  animation-delay: -15.68s;
+}
+.rot:nth-child(160) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(161) {
+  margin-top: -18vh;
+}
+.rot:nth-child(161), .rot:nth-child(161) .key {
+  animation-duration: 12s;
+  animation-delay: -4.44s;
+}
+.rot:nth-child(161) .key {
+  margin-left: 26vw;
+}
+
+.rot:nth-child(162) {
+  margin-top: 29vh;
+}
+.rot:nth-child(162), .rot:nth-child(162) .key {
+  animation-duration: 8s;
+  animation-delay: -5.92s;
+}
+.rot:nth-child(162) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(163) {
+  margin-top: 6vh;
+}
+.rot:nth-child(163), .rot:nth-child(163) .key {
+  animation-duration: 13s;
+  animation-delay: -10.79s;
+}
+.rot:nth-child(163) .key {
+  margin-left: 18vw;
+}
+
+.rot:nth-child(164) {
+  margin-top: 1vh;
+}
+.rot:nth-child(164), .rot:nth-child(164) .key {
+  animation-duration: 16s;
+  animation-delay: -0.8s;
+}
+.rot:nth-child(164) .key {
+  margin-left: 32vw;
+}
+
+.rot:nth-child(165) {
+  margin-top: 33vh;
+}
+.rot:nth-child(165), .rot:nth-child(165) .key {
+  animation-duration: 14s;
+  animation-delay: -9.38s;
+}
+.rot:nth-child(165) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(166) {
+  margin-top: -9vh;
+}
+.rot:nth-child(166), .rot:nth-child(166) .key {
+  animation-duration: 10s;
+  animation-delay: -6s;
+}
+.rot:nth-child(166) .key {
+  margin-left: 21vw;
+}
+
+.rot:nth-child(167) {
+  margin-top: 30vh;
+}
+.rot:nth-child(167), .rot:nth-child(167) .key {
+  animation-duration: 20s;
+  animation-delay: -14.4s;
+}
+.rot:nth-child(167) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(168) {
+  margin-top: -7vh;
+}
+.rot:nth-child(168), .rot:nth-child(168) .key {
+  animation-duration: 12s;
+  animation-delay: -9.96s;
+}
+.rot:nth-child(168) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(169) {
+  margin-top: -18vh;
+}
+.rot:nth-child(169), .rot:nth-child(169) .key {
+  animation-duration: 9s;
+  animation-delay: -8.64s;
+}
+.rot:nth-child(169) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(170) {
+  margin-top: 8vh;
+}
+.rot:nth-child(170), .rot:nth-child(170) .key {
+  animation-duration: 9s;
+  animation-delay: -3.6s;
+}
+.rot:nth-child(170) .key {
+  margin-left: 17vw;
+}
+
+.rot:nth-child(171) {
+  margin-top: -25vh;
+}
+.rot:nth-child(171), .rot:nth-child(171) .key {
+  animation-duration: 18s;
+  animation-delay: -14.04s;
+}
+.rot:nth-child(171) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(172) {
+  margin-top: 4vh;
+}
+.rot:nth-child(172), .rot:nth-child(172) .key {
+  animation-duration: 19s;
+  animation-delay: -16.15s;
+}
+.rot:nth-child(172) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(173) {
+  margin-top: 35vh;
+}
+.rot:nth-child(173), .rot:nth-child(173) .key {
+  animation-duration: 14s;
+  animation-delay: -3.64s;
+}
+.rot:nth-child(173) .key {
+  margin-left: 34vw;
+}
+
+.rot:nth-child(174) {
+  margin-top: 4vh;
+}
+.rot:nth-child(174), .rot:nth-child(174) .key {
+  animation-duration: 9s;
+  animation-delay: -4.41s;
+}
+.rot:nth-child(174) .key {
+  margin-left: 23vw;
+}
+
+.rot:nth-child(175) {
+  margin-top: 35vh;
+}
+.rot:nth-child(175), .rot:nth-child(175) .key {
+  animation-duration: 17s;
+  animation-delay: -0.34s;
+}
+.rot:nth-child(175) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(176) {
+  margin-top: -12vh;
+}
+.rot:nth-child(176), .rot:nth-child(176) .key {
+  animation-duration: 15s;
+  animation-delay: -10.05s;
+}
+.rot:nth-child(176) .key {
+  margin-left: 13vw;
+}
+
+.rot:nth-child(177) {
+  margin-top: 13vh;
+}
+.rot:nth-child(177), .rot:nth-child(177) .key {
+  animation-duration: 9s;
+  animation-delay: -3.6s;
+}
+.rot:nth-child(177) .key {
+  margin-left: 21vw;
+}
+
+.rot:nth-child(178) {
+  margin-top: 16vh;
+}
+.rot:nth-child(178), .rot:nth-child(178) .key {
+  animation-duration: 14s;
+  animation-delay: -7.28s;
+}
+.rot:nth-child(178) .key {
+  margin-left: 24vw;
+}
+
+.rot:nth-child(179) {
+  margin-top: 3vh;
+}
+.rot:nth-child(179), .rot:nth-child(179) .key {
+  animation-duration: 13s;
+  animation-delay: -4.42s;
+}
+.rot:nth-child(179) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(180) {
+  margin-top: 22vh;
+}
+.rot:nth-child(180), .rot:nth-child(180) .key {
+  animation-duration: 19s;
+  animation-delay: -15.96s;
+}
+.rot:nth-child(180) .key {
+  margin-left: 9vw;
+}
+
+.rot:nth-child(181) {
+  margin-top: -5vh;
+}
+.rot:nth-child(181), .rot:nth-child(181) .key {
+  animation-duration: 18s;
+  animation-delay: -1.98s;
+}
+.rot:nth-child(181) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(182) {
+  margin-top: -1vh;
+}
+.rot:nth-child(182), .rot:nth-child(182) .key {
+  animation-duration: 18s;
+  animation-delay: -14.22s;
+}
+.rot:nth-child(182) .key {
+  margin-left: 29vw;
+}
+
+.rot:nth-child(183) {
+  margin-top: -23vh;
+}
+.rot:nth-child(183), .rot:nth-child(183) .key {
+  animation-duration: 17s;
+  animation-delay: -11.05s;
+}
+.rot:nth-child(183) .key {
+  margin-left: 15vw;
+}
+
+.rot:nth-child(184) {
+  margin-top: -12vh;
+}
+.rot:nth-child(184), .rot:nth-child(184) .key {
+  animation-duration: 10s;
+  animation-delay: -5.3s;
+}
+.rot:nth-child(184) .key {
+  margin-left: 14vw;
+}
+
+.rot:nth-child(185) {
+  margin-top: 24vh;
+}
+.rot:nth-child(185), .rot:nth-child(185) .key {
+  animation-duration: 8s;
+  animation-delay: -2.96s;
+}
+.rot:nth-child(185) .key {
+  margin-left: 21vw;
+}
+
+.rot:nth-child(186) {
+  margin-top: 18vh;
+}
+.rot:nth-child(186), .rot:nth-child(186) .key {
+  animation-duration: 16s;
+  animation-delay: -11.84s;
+}
+.rot:nth-child(186) .key {
+  margin-left: 8vw;
+}
+
+.rot:nth-child(187) {
+  margin-top: 14vh;
+}
+.rot:nth-child(187), .rot:nth-child(187) .key {
+  animation-duration: 8s;
+  animation-delay: -3.76s;
+}
+.rot:nth-child(187) .key {
+  margin-left: 25vw;
+}
+
+.rot:nth-child(188) {
+  margin-top: -17vh;
+}
+.rot:nth-child(188), .rot:nth-child(188) .key {
+  animation-duration: 14s;
+  animation-delay: -8.12s;
+}
+.rot:nth-child(188) .key {
+  margin-left: 16vw;
+}
+
+.rot:nth-child(189) {
+  margin-top: -4vh;
+}
+.rot:nth-child(189), .rot:nth-child(189) .key {
+  animation-duration: 19s;
+  animation-delay: -12.73s;
+}
+.rot:nth-child(189) .key {
+  margin-left: 34vw;
+}
+
+.rot:nth-child(190) {
+  margin-top: -23vh;
+}
+.rot:nth-child(190), .rot:nth-child(190) .key {
+  animation-duration: 18s;
+  animation-delay: -7.2s;
+}
+.rot:nth-child(190) .key {
+  margin-left: 14vw;
+}
+
+.rot:nth-child(191) {
+  margin-top: 21vh;
+}
+.rot:nth-child(191), .rot:nth-child(191) .key {
+  animation-duration: 11s;
+  animation-delay: -6.82s;
+}
+.rot:nth-child(191) .key {
+  margin-left: 10vw;
+}
+
+.rot:nth-child(192) {
+  margin-top: -4vh;
+}
+.rot:nth-child(192), .rot:nth-child(192) .key {
+  animation-duration: 13s;
+  animation-delay: -10.92s;
+}
+.rot:nth-child(192) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(193) {
+  margin-top: -2vh;
+}
+.rot:nth-child(193), .rot:nth-child(193) .key {
+  animation-duration: 17s;
+  animation-delay: -12.92s;
+}
+.rot:nth-child(193) .key {
+  margin-left: 27vw;
+}
+
+.rot:nth-child(194) {
+  margin-top: 34vh;
+}
+.rot:nth-child(194), .rot:nth-child(194) .key {
+  animation-duration: 20s;
+  animation-delay: -19.8s;
+}
+.rot:nth-child(194) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(195) {
+  margin-top: 1vh;
+}
+.rot:nth-child(195), .rot:nth-child(195) .key {
+  animation-duration: 19s;
+  animation-delay: -0.57s;
+}
+.rot:nth-child(195) .key {
+  margin-left: 35vw;
+}
+
+.rot:nth-child(196) {
+  margin-top: 25vh;
+}
+.rot:nth-child(196), .rot:nth-child(196) .key {
+  animation-duration: 17s;
+  animation-delay: -9.01s;
+}
+.rot:nth-child(196) .key {
+  margin-left: 26vw;
+}
+
+.rot:nth-child(197) {
+  margin-top: 17vh;
+}
+.rot:nth-child(197), .rot:nth-child(197) .key {
+  animation-duration: 10s;
+  animation-delay: -5.1s;
+}
+.rot:nth-child(197) .key {
+  margin-left: 35vw;
+}
+
+.rot:nth-child(198) {
+  margin-top: -23vh;
+}
+.rot:nth-child(198), .rot:nth-child(198) .key {
+  animation-duration: 13s;
+  animation-delay: -5.85s;
+}
+.rot:nth-child(198) .key {
+  margin-left: 13vw;
+}
+
+.rot:nth-child(199) {
+  margin-top: 23vh;
+}
+.rot:nth-child(199), .rot:nth-child(199) .key {
+  animation-duration: 19s;
+  animation-delay: -3.04s;
+}
+.rot:nth-child(199) .key {
+  margin-left: 6vw;
+}
+
+.rot:nth-child(200) {
+  margin-top: -5vh;
+}
+.rot:nth-child(200), .rot:nth-child(200) .key {
+  animation-duration: 9s;
+  animation-delay: -0.72s;
+}
+.rot:nth-child(200) .key {
+  margin-left: 20vw;
+}
+
+.vis:after {
+  animation: hl .5s ease-out 2 alternate;
+}
+
+.key {
+  animation-direction: reverse;
+}
+.key:after {
+  opacity: .25;
+  transform: translate(-50%, -50%);
+  content: attr(data-name);
+}
+
+@keyframes rotY {
+  to {
+    transform: rotateY(1turn);
+  }
+}
+@keyframes hl {
+  80%, 100% {
+    opacity: .999;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="a3d"></div>
+
+
+<script type="text/javascript" src="js/3d.js"></script>
+
+</body>
+</html>

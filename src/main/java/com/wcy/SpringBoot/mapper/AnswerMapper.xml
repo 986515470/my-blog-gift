@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcy.SpringBoot.mapper.AnswerMapper">
+  <resultMap id="BaseResultMap" type="com.wcy.SpringBoot.model.Answer">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="answer" jdbcType="VARCHAR" property="answer" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <select id="select" resultType="com.wcy.SpringBoot.model.Answer">
+       select * from answer
+       order by num asc
+    </select>
+
+  <insert id="insert" parameterType="com.wcy.SpringBoot.model.Answer">
+    insert   into answer (id,answer,time,name,num)
+    values (#{id,jdbcType=INTEGER}, #{answer,jdbcType=VARCHAR}, #{time,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},#{num,jdbcType=INTEGER})
+   </insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
